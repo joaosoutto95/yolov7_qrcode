@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Detection Results</title>
+</head>
+<body>
+    <h1>QR Code Detection Results</h1>
+    <div>
+        <img src="{{ image_url }}" alt="Uploaded Image">
+    </div>
+    <h1>QR Code Extraction Results</h1>
+    {% if qr_codes|length == 1 %}
+    <p>QR Code #1: 
+        {% if qr_codes[0].startswith('http://') or qr_codes[0].startswith('https://') %}
+            <a href="{{ qr_codes[0] }}" target="_blank">{{ qr_codes[0] }}</a>
+        {% else %}
+            {{ qr_codes[0] }}
+        {% endif %}
+    </p>
+    {% else %}
+        <ul>
+            {% for qr_code in qr_codes %}
+            <li>QR Code #{{ loop.index }}: 
+                {% if qr_code.startswith('http://') or qr_code.startswith('https://') %}
+                    <a href="{{ qr_code }}" target="_blank">{{ qr_code }}</a>
+                {% else %}
+                    {{ qr_code }}
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <!-- Add a link/button to go back and try again -->
+    <a href="/" class="btn btn-primary">Upload Another Image</a>
+</body>
+</html>

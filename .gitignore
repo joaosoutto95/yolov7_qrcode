@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Images in upload:
+*.jpg
+*.jpeg
+*.png
+
 # Distribution / packaging
 .Python
 build/
@@ -122,6 +127,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+tru_env/
 env/
 venv/
 ENV/
@@ -151,6 +157,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Datasets
+dataset/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
