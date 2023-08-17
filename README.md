@@ -13,10 +13,14 @@ For starters, this webapp ran in a **Python 3.8.9** enviroment. So maybe check f
 git clone https://github.com/joaosoutto95/yolov7_qrcode.git
 ```
 
-2. Setup a virtual enviroment for the isolation of the project dependencies:
+2. Setup a virtual enviroment for the isolation of the project dependencies and then activate it:
 In Windows PS the code used is:
 ```
 python -m venv env
+```
+Activate:
+```
+.\env\Scripts\activate
 ```
 
 3. After setting the venv, via PS enter the backend folder and:
@@ -33,5 +37,5 @@ python .\app.py
 ### For Streamlit usage:
 ![image](https://github.com/joaosoutto95/yolov7_qrcode/assets/81658694/d51d5af3-b90a-45d1-a130-9faf6e6f5abd)
 ```
-streamlit run streamlit_app.py
+streamlit run .\streamlit_app.py
 ```
