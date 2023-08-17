@@ -3,10 +3,15 @@
 ## OBJECTIVE:
 This is the repository for a basic localhost webapp that receives **.jpg, .jpeg or .png** files and outputs the **Yolov7 QR Code detection** on the image and tries to access the information inside this QR. It works under a **Flask App or Streamlit App**.
 
-## EXAMPLE:
+## DATASET:
+I've used the RoboFlow QR Code dataset available at the link bellow to train my algorithm (did a transfer learning from yolov7.pt, the COCO pre-trained weights):
+https://universe.roboflow.com/qrcodes/qrcodes-same-split-oneclass/dataset/3
 
+## REASONING BEHIND THE SOLUTION:
+Basically i'm using a Yolov7 detection algorithm that receives and image array using cv2 to identify all QR Codes and list them so it can run one by one in a cv2 function named QRCodeDetector. This outputs the content, if possible, inside the QR Code.
+After the model backend finishes it's work, the app.py or the streamlit_app.py organizes the output in a html page under a localhost server using Flask or Streamlit.
 
-## USAGE:
+## INSTRUCTIONS FOR THE USAGE:
 For starters, this webapp ran in a **Python 3.8.9** enviroment. So maybe check for dependency conflicts if your using another python version.
 1. First you should create a folder in which the project will be git cloned, then use the code on Windows PS (or another CMD) bellow to clone the repository to your folder:
 ```
