@@ -34,8 +34,14 @@ pip install -r requirements.txt
 ```
 python .\app.py
 ```
+Now click on "Choose image" button and you should see the output of the image with the detection boxes and the QR information results bellow:
+![image](https://github.com/joaosoutto95/yolov7_qrcode/assets/81658694/e19c87fa-c1f9-4c50-a9a7-7e26e27f5505)
+
+
 ### For Streamlit usage:
 ![image](https://github.com/joaosoutto95/yolov7_qrcode/assets/81658694/d51d5af3-b90a-45d1-a130-9faf6e6f5abd)
 ```
 streamlit run .\streamlit_app.py
 ```
+Now drop or browse an QR Code image and you should see the output of the image with the detection boxes and the QR informatio results bellow:
+![image](https://github.com/joaosoutto95/yolov7_qrcode/assets/81658694/5d2f5884-6b4d-4e25-a155-c3b90248afb5)
