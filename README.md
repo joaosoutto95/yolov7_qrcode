@@ -50,3 +50,8 @@ streamlit run .\streamlit_app.py
 ```
 Now drop or browse an QR Code image and you should see the output of the image with the detection boxes and the QR informatio results bellow:
 ![image](https://github.com/joaosoutto95/yolov7_qrcode/assets/81658694/5d2f5884-6b4d-4e25-a155-c3b90248afb5)
+
+
+## BONUS:
+In this example, the QR Code is rotated and the Yolov7 detects while the cv2 predicts correctly it's content.
+![image](https://github.com/joaosoutto95/yolov7_qrcode/assets/81658694/0a8b1b79-65df-4415-bdac-c50ef20a22c7)
